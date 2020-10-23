@@ -6,21 +6,24 @@ const CourseModel = mongoose.model("Courses");
 
 router.post('/add', (req, res) =>{
     
-    if(req.body.courseName && req.body.courseDuration && req.body.courseFee ==! "")
+    
     try{
         var newpost = new CourseModel();
         newpost.courseName = req.body.courseName;
         newpost.courseDuration = req.body.courseDuration;
         newpost.courseID = Math.ceil(Math.random()* 10000);
         newpost.courseFee = req.body.courseFee;
-        newpost.save();
-        res.redirect('/course/list')
+        if(!req.body.courseName == ""){
+            newpost.save();
+            res.redirect('/course/list')
+        }else{
+            res.redirect('/course/list')
+        }
+        
     }
     catch(error){
 console.log(error)
-    }
-    else{
-        console.log("user forgot to enter")
+
     }
     
 })
