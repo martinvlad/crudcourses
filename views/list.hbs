@@ -1,0 +1,27 @@
+<h1>Courses</h1>
+<head>
+    <title>List of Different Courses</title>
+      <link rel="stylesheet" href="/css/style.css">
+</head>
+<table>
+    <tr>
+        <th>ID</th> 
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Price</th>
+
+    </tr>
+    {{#each data}}
+    <tr>
+        <td>{{this.courseID}}</td> 
+        <td>{{this.courseName}}</td>
+        <td>{{this.courseDuration}}</td>
+        <td>{{this.courseFee}}</td>
+    </tr>
+  {{/each}}
+</table>
+<form action="/course/add" >
+<p>
+ <button type="submit">Add Another Course</button>
+</p>
+</form>
