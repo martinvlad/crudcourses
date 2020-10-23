@@ -5,6 +5,8 @@ const router = express.Router();
 const CourseModel = mongoose.model("Courses");
 
 router.post('/add', (req, res) =>{
+    
+    if(req.body.courseName && req.body.courseDuration && req.body.courseFee ==! "")
     try{
         var newpost = new CourseModel();
         newpost.courseName = req.body.courseName;
@@ -16,6 +18,9 @@ router.post('/add', (req, res) =>{
     }
     catch(error){
 console.log(error)
+    }
+    else{
+        console.log("user forgot to enter")
     }
     
 })

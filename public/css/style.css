@@ -2,9 +2,10 @@ table {
     width: 100%;
   }
   
-  table, th, td {
-    border: 1px solid lightgrey;
+  table, th, td,button {
+    border: 3px solid lightgrey;
     border-collapse: collapse;
+    
   }
   
   th, td {
@@ -13,5 +14,29 @@ table {
 
 
 
-
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  button{
+      border-radius: 5px;
+  }
+  
+ 
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  body{
+    background-color: #f2f2f2;
+  }
   
