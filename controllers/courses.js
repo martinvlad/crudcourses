@@ -32,6 +32,9 @@ console.log(error)
 router.get('/add', (req, res)=>{
     res.render('addcourse')
 })
+router.delete('/list/:id', (req, res)=>{
+    
+})
 
 router.get('/list', (req, res) =>{
 
